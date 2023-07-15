@@ -1,0 +1,26 @@
+
+{% block content %}
+<h2>ALL Employee Details</h2>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for conts in cont %}
+        <tr>
+            <th scope="row">{{conts.id}}</th>
+            <td>{{conts.name}}</td>
+            <td>{{conts.email}}</td>
+            <td>{{conts.subject}}</td>
+            <td>{{conts.message}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
